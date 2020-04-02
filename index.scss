@@ -16,12 +16,22 @@ body {
   //   background-color: $x;
 }
 .header {
+  // margin: 0 0;
+  // padding: 0;
+  background-color: purple;
   text-align: center;
   margin-top: 80px;
+  transform: rotate(720deg);
+  animation: rot 0.5s forwards;
   //   background-color: royalblue;
-
+  @keyframes rot {
+    to {
+      transform: rotate(0);
+    }
+  }
   h2,
   h1 {
+    margin: 0;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -40,7 +50,7 @@ body {
   }
   p {
     color: $Grayish-Blue;
-    width: 500px;
+    max-width: 500px;
     margin: 15px auto;
     font-size: 15px;
   }
@@ -48,11 +58,10 @@ body {
 }
 .grid {
   display: grid;
-  grid-template-columns: 6.5% 1fr 1fr 1fr 6.5%;
+  grid-template-columns: 8% 1fr 1fr 1fr 8%;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
   position: absolute;
-  margin-bottom: 200rem;
   padding-bottom: 5rem;
 }
 .card {
@@ -102,8 +111,69 @@ body {
   top: 145px;
   position: relative;
 }
+///**************
+.one {
+  transform: translateX(200%);
+  animation: init 0.5s forwards;
+  //transform and translate..and if possible move them diagonally
+}
+.two {
+  transform: translateY(-100%);
+  animation: init 0.5s forwards;
+}
+.three {
+  transform: translateX(-100%);
+  animation: init 0.5s forwards;
+}
 
+.four {
+  transform: translateY(100%);
+  animation: init 0.5s forwards;
+}
+@keyframes init {
+  to {
+    transform: translateX(0);
+  }
+}
+
+///*************8
 // .footer {
 //   position: absolute;
 // bottom: -15vh;
 // }
+//and (min-width:825px)
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: 10% 1fr 1fr 10%;
+    .one {
+      top: 0;
+    }
+
+    .three {
+      grid-column: 2/3;
+    }
+
+    .four {
+      grid-column: 3/4;
+      top: 0;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .grid {
+    background-color: pink;
+    grid-template-columns: 15% 1fr 15%;
+  }
+  .two {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .three {
+    grid-row: 3/4;
+  }
+  .four {
+    grid-column: 2/3 !important;
+    grid-row: 4/5;
+  }
+}
