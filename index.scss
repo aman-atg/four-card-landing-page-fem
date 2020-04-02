@@ -1,39 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+$Very-Dark-Blue: hsl(234, 12%, 34%);
+$Grayish-Blue: hsl(229, 6%, 66%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+html {
+  font-family: "Poppins", sans-serif;
+  //   overflow: auto;
+}
+body {
+  background-color: $Very-Light-Gray;
+  //   background-color: $x;
+}
 .header {
   text-align: center;
   margin-top: 80px;
   //   background-color: royalblue;
+
   h2,
   h1 {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  p {
-    padding: 0 400px;
+  h2 {
+    color: $Very-Dark-Blue;
+    font-weight: 200;
+    font-size: 35px;
+    margin-bottom: 0;
   }
+  h1 {
+    line-height: 42px;
+    margin-top: 0;
+    color: $Very-Dark-Blue;
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+  p {
+    color: $Grayish-Blue;
+    width: 500px;
+    margin: 15px auto;
+    font-size: 15px;
+  }
+  margin-bottom: 70px;
 }
 .grid {
   display: grid;
-  grid-template-columns: 10% 1fr 1fr 1fr 10%;
+  grid-template-columns: 6.5% 1fr 1fr 1fr 6.5%;
   grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  gap: 30px;
   position: absolute;
+  margin-bottom: 200rem;
+  padding-bottom: 5rem;
 }
 .card {
+  background-color: white;
+  box-shadow: 5px 10px 15px rgba($color: $Grayish-Blue, $alpha: 0.25);
+  // box-shadow: 2px 10px 15px rgb(210, 220, 230);
+  height: 250px;
   border-top: 4px solid blue;
-  border-radius: 4.5px;
- padding:0 2rem;
+  border-radius: 6px;
+  padding: 0 2rem;
+  h3 {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 1.3rem;
+    color: $Grayish-Blue;
+    margin-top: 0px;
+  }
+  img {
+    position: relative;
+    top: 30px;
+    margin-left: calc(100% - 4rem);
+  }
 }
 .one {
+  border-color: $Cyan;
   grid-column: 2/3;
-  top: 100px;
+  top: 145px;
   position: relative;
   //   grid-row: span 2;
 }
+.two {
+  border-color: $Red;
+}
 .three {
+  border-color: $Orange;
+
   grid-column: 3/4;
   grid-row: 2/3;
 }
-.four{
-    top: 100px;
-position: relative;    
+.four {
+  border-color: $Blue;
+
+  top: 145px;
+  position: relative;
 }
+
+// .footer {
+//   position: absolute;
+// bottom: -15vh;
+// }
