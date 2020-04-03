@@ -1,6 +1,6 @@
 # Four-Cards Landing Page
 
-A responsive landing page with 4 cards coded with grid.
+A responsive landing page with 4 cards (coded with grid).
 
 ## Getting Started
 
