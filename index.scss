@@ -60,7 +60,6 @@ body {
   grid-template-columns: 8% 1fr 1fr 1fr 8%;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
-  position: absolute;
   padding-bottom: 5rem;
 }
 .card {
@@ -137,12 +136,15 @@ body {
   }
 }
 
-///*************8
-// .footer {
-//   position: absolute;
-// bottom: -15vh;
-// }
-//and (min-width:825px)
+.footer {
+  // background-color: pink;
+  text-align: center;
+  a {
+    // text-decoration: none;
+    color: $Red;
+  }
+}
+
 @media (max-width: 1080px) {
   .grid {
     position: relative;
@@ -182,7 +184,7 @@ body {
     h2 {
       font-size: 25px;
     }
-    h1{
+    h1 {
       margin-bottom: 0;
     }
     p {

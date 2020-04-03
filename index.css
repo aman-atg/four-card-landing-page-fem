@@ -41,7 +41,6 @@ body {
   grid-template-columns: 8% 1fr 1fr 1fr 8%;
   grid-template-rows: 1fr 1fr;
   gap: 30px;
-  position: absolute;
   padding-bottom: 5rem; }
 
 .card {
@@ -106,6 +105,11 @@ body {
 @keyframes init {
   to {
     transform: translateX(0); } }
+.footer {
+  text-align: center; }
+  .footer a {
+    color: #ea5353; }
+
 @media (max-width: 1080px) {
   .grid {
     position: relative;
