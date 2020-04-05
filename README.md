@@ -2,6 +2,8 @@
 
 A responsive landing page with 4 cards (coded with grid).
 
+![Landing Page](./images/Screenshot&#32;(3).png)
+
 ## Getting Started
 
 Start by cloning the repo : 
